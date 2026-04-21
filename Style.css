@@ -1,0 +1,412 @@
+/* =========================
+   ОБЩИЕ НАСТРОЙКИ
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1f3c88;
+}
+
+.section-text {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+}
+
+/* =========================
+   ШАПКА
+========================= */
+header {
+    background: linear-gradient(to right, #1f3c88, #39a2db);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Логотип */
+.logo h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 14px;
+}
+
+/* Меню */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe082;
+}
+
+/* =========================
+   ГЛАВНЫЙ БАННЕР
+========================= */
+.hero {
+    background: linear-gradient(to right, #e3f2fd, #f8fbff);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: #1f3c88;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #39a2db;
+    transform: scale(1.05);
+}
+
+/* Картинка главного блока */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   ПРЕИМУЩЕСТВА
+========================= */
+.advantages-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.adv-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.adv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.adv-card h3 {
+    color: #1f3c88;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ЯЗЫКИ
+========================= */
+.language-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.language-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.language-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.language-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.language-card h3 {
+    font-size: 24px;
+    color: #1f3c88;
+    padding: 20px 20px 10px;
+}
+
+.language-card p {
+    padding: 0 20px 25px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* =========================
+   ЦЕНЫ
+========================= */
+.price-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background-color: #1f3c88;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f7ff;
+}
+
+/* =========================
+   ГАЛЕРЕЯ
+========================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   ОТЗЫВЫ
+========================= */
+.reviews-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+.review-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #1f3c88;
+}
+
+/* =========================
+   ФОРМА
+========================= */
+.form-section {
+    background-color: #eaf4ff;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #39a2db;
+    transform: scale(1.02);
+}
+
+/* =========================
+   ПОДВАЛ
+========================= */
+footer {
+    background-color: #102542;
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.footer-block {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-block h3 {
+    margin-bottom: 15px;
+    color: #ffe082;
+}
+
+.footer-block p {
+    margin-bottom: 10px;
+    color: #d8e6f3;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 20px 0;
+    margin-top: 20px;
+    color: #cdd9e5;
+}
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
